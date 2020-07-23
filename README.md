@@ -1,5 +1,8 @@
 # coding-standard
 
+[![Build Status](https://travis-ci.com/DmitryBezik/ground-coding-standard.svg?branch=master)](https://travis-ci.com/DmitryBezik/ground-coding-standard)
+
+
 The coding standard ruleset
 
 This specification extends and expands [PSR-12](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md), 
