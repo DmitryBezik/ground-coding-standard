@@ -1069,6 +1069,8 @@
         <exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.FoundInImplementedInterfaceAfterLastUsed"/>
         <exclude name="Generic.Commenting.DocComment.SpacingBeforeTags"/>
         <exclude name="Generic.Commenting.DocComment.ParamNotFirst"/>
+        <exclude name="Generic.NamingConventions.CamelCapsFunctionName.ScopeNotCamelCaps" />
+        <exclude name="Generic.ControlStructures.DisallowYodaConditions.Found" />
     </rule>
     <rule ref="PSR2">
         <exclude name="PSR2.Classes.ClassDeclaration.OpenBraceNewLine"/>
