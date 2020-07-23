@@ -231,11 +231,13 @@
     <rule ref="WebimpressCodingStandard.Arrays.Format"/>
     <!-- All double arrow symbols MUST be aligned to one space after the
          longest array key. -->
+    <!--
     <rule ref="WebimpressCodingStandard.Arrays.DoubleArrow">
         <properties>
             <property name="maxPadding" value="50"/>
         </properties>
     </rule>
+    -->
     <!-- The short list syntax `[...]` SHOULD be used instead of `list(...)`. -->
     <rule ref="SlevomatCodingStandard.PHP.ShortList"/>
 
@@ -531,6 +533,7 @@
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
         <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation" />
+        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation" />
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint" />
