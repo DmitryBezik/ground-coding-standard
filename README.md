@@ -47,7 +47,7 @@ the basic coding standard.
        <file>src</file>
        <file>test</file>
    
-       <!-- Include all rules from the Laminas Coding Standard -->
+       <!-- Include all rules from the Coding Standard -->
        <rule ref="CodingStandard"/>
    </ruleset>
    ```
