@@ -25,6 +25,7 @@
     <rule ref="PSR12">
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
+        <exclude name="Squiz.ControlStructures.ControlSignature.SpaceAfterKeyword"/>
         <!-- checked by WebimpressCodingStandard.WhiteSpace.BraceBlankLine -->
     </rule>
 
@@ -397,7 +398,7 @@
             <property name="linesCountBeforeClosingBrace" value="0" />
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
+
     <rule ref="SlevomatCodingStandard.Classes.MethodSpacing.IncorrectLinesCountBetweenMethods" />
 
     <!--
@@ -1071,34 +1072,13 @@
         <exclude name="Generic.Commenting.DocComment.ParamNotFirst"/>
         <exclude name="Generic.NamingConventions.CamelCapsFunctionName.ScopeNotCamelCaps" />
         <exclude name="Generic.ControlStructures.DisallowYodaConditions.Found" />
+        <exclude name="Generic.Files.EndFileNewline.NotFound" />
+        <exclude name="Generic.Files.OneObjectStructurePerFile.MultipleFound" />
     </rule>
-    <rule ref="PSR2">
-        <exclude name="PSR2.Classes.ClassDeclaration.OpenBraceNewLine"/>
-    </rule>
-    <rule ref="PSR12">
-        <exclude name="Squiz.Commenting.DocCommentAlignment.SpaceAfterStar"/>
-        <exclude name="Squiz.ControlStructures.ControlSignature.SpaceAfterKeyword"/>
-    </rule>
-
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/DeclareStrictTypesSniff.php">
-        <properties>
-            <property name="newlinesCountBetweenOpenTagAndDeclare" value="2" />
-            <property name="spacesCountAroundEqualsSign" value="0" />
-        </properties>
-    </rule>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Arrays/TrailingArrayCommaSniff.php"/>
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Namespaces/UnusedUsesSniff.php">
         <properties>
             <property name="searchAnnotations" value="true"/>
         </properties>
     </rule>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Classes/ClassConstantVisibilitySniff.php"/>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/ControlStructures/AssignmentInConditionSniff.php"/>
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Functions/StaticClosureSniff.php"/>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Classes/UnusedPrivateElementsSniff.php"/>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Functions/UnusedInheritedVariablePassedToClosureSniff.php"/>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Namespaces/UselessAliasSniff.php"/>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/ReturnTypeHintSpacingSniff.php"/>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/ParameterTypeHintSpacingSniff.php"/>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Namespaces/MultipleUsesPerLineSniff.php"/>
 </ruleset>
