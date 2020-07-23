@@ -40,8 +40,15 @@
         <!-- The short echo tag MAY be used in templates. -->
         <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
     </rule>
+    <rule ref="Generic.PHP.DisallowAlternativePHPTags"/>
     <!-- There MAY NOT be any inline HTML in PHP code. -->
     <rule ref="Generic.Files.InlineHTML"/>
+    <rule ref="Generic.Files.ByteOrderMark"/>
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n"/>
+        </properties>
+    </rule>
     <!-- Deprecated PHP functions MUST be avoided. -->
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
     <!-- The backtick operator MUST NOT be used. -->
@@ -116,6 +123,11 @@
                 <element value="@copyright"/>
                 <element value="@license"/>
             </property>
+
+            <property name="newlinesCountBetweenOpenTagAndDeclare" value="2" />
+            <property name="spacesCountAroundEqualsSign" value="0" />
+            <property name="newlinesCountAfterDeclare" value="2" />
+
         </properties>
     </rule>
 
@@ -127,6 +139,11 @@
          SHOULD be split into multiple subsequent lines of no more than 80
          characters each. -->
     <!-- checked by Generic.Files.LineLength -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="180"/>
+        </properties>
+    </rule>
 
     <!-- There MUST NOT be trailing whitespace at the end of lines.
          Blank lines MAY be added to improve readability and to indicate
@@ -174,6 +191,10 @@
         </properties>
     </rule>
 
+    <rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar">
+        <message>Variable "%s" not allowed in double quoted string; use sprintf() or concatenation instead</message>
+    </rule>
+
     <!-- 2.5 Keywords and Types -->
 
     <!-- All PHP reserved keywords and types MUST be in lower case.
@@ -182,6 +203,7 @@
     <!-- checked by Generic.PHP.LowerCaseKeyword -->
     <!-- checked by Generic.PHP.LowerCaseConstant -->
     <!-- checked by Generic.PHP.LowerCaseType -->
+    <rule ref="Generic.PHP.LowerCaseType" />
 
     <!-- Short form of type keywords MUST be used i.e. bool instead of boolean,
          int instead of integer etc. -->
@@ -216,6 +238,9 @@
     </rule>
     <!-- The short list syntax `[...]` SHOULD be used instead of `list(...)`. -->
     <rule ref="SlevomatCodingStandard.PHP.ShortList"/>
+
+    <rule ref="SlevomatCodingStandard.PHP.UselessParentheses" />
+    <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon" />
 
     <!-- 3. Declare Statements, Namespace, and Import Statements -->
 
@@ -293,6 +318,22 @@
     <!-- Internal constants MUST be imported. -->
     <rule ref="WebimpressCodingStandard.PHP.ImportInternalConstant"/>
 
+    <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias" />
+
+    <rule ref="SlevomatCodingStandard.Namespaces.UseSpacing">
+        <properties>
+            <property name="linesCountAfterLastUse" value="1" />
+            <property name="linesCountBeforeFirstUse" value="1" />
+            <property name="linesCountBetweenUseTypes" value="0" />
+        </properties>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
+        <properties>
+            <property name="searchAnnotations" value="true" />
+        </properties>
+    </rule>
+
     <!-- 4. Classes, Properties, and Methods -->
 
     <!-- Any closing brace MUST NOT be followed by any comment or statement on
@@ -333,6 +374,30 @@
     <rule ref="WebimpressCodingStandard.Formatting.DoubleColon"/>
     <!-- All private methods, constants and properties MUST be used. -->
     <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
+
+    <rule ref="SlevomatCodingStandard.Classes.TraitUseDeclaration" />
+    <rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
+        <properties>
+            <property name="linesCountAfterLastUse" value="1" />
+            <property name="linesCountAfterLastUseWhenLastInClass" value="0" />
+            <property name="linesCountBeforeFirstUse" value="0" />
+            <property name="linesCountBetweenUses" value="0" />
+        </properties>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants" />
+    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility" />
+    <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
+        <properties>
+            <property name="linesCountAfterOpeningBrace" value="0" />
+            <property name="linesCountBeforeClosingBrace" value="0" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
+    <rule ref="SlevomatCodingStandard.Classes.MethodSpacing.IncorrectLinesCountBetweenMethods" />
+
+    <rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
 
     <!-- 4.1 Extends and Implements -->
 
@@ -461,6 +526,19 @@
 
     <!-- The question mark MUST be used when the default argument value is null. -->
     <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"/>
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint" />
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
+        <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint" />
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
+        <properties>
+            <property name="spacesCountBeforeColon" value="0" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint" />
+    <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint" />
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable" />
 
     <!-- 4.6 abstract, final, and static -->
 
@@ -491,6 +569,7 @@
          splitting the argument list itself. -->
     <!-- checked by Generic.Functions.FunctionCallArgumentSpacing -->
     <!-- checked by PSR2.Methods.FunctionCallSignature -->
+    <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
 
     <!-- 5. Control Structures -->
 
@@ -513,6 +592,37 @@
     <!-- checked by Squiz.ControlStructures.LowercaseDeclaration -->
     <!-- checked by Generic.ControlStructures.InlineControlStructure -->
     <!-- checked by WebimpressCodingStandard.WhiteSpace.BraceBlankLine -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.AssignmentInCondition" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing">
+        <properties>
+            <property name="tokensToCheck" type="array">
+                <element value="T_DO" />
+                <element value="T_FOR" />
+                <element value="T_FOREACH" />
+                <element value="T_IF" />
+                <element value="T_SWITCH" />
+                <element value="T_TRY" />
+                <element value="T_WHILE" />
+            </property>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowContinueWithoutIntegerOperandInSwitch" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit">
+        <properties>
+            <property name="ignoreStandaloneIfInScope" value="true" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
+        <properties>
+            <property name="allowSingleLineYieldStacking" value="true" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireMultiLineTernaryOperator">
+        <properties>
+            <property name="lineLengthLimit" value="100" />
+        </properties>
+    </rule>
 
     <!-- Additional rules -->
 
@@ -674,6 +784,9 @@
     <!-- There MUST be one whitespace after unary not. -->
     <rule ref="Generic.Formatting.SpaceAfterNot"/>
 
+    <rule ref="SlevomatCodingStandard.Operators.NegationOperatorSpacing" />
+    <rule ref="SlevomatCodingStandard.Operators.SpreadOperatorSpacing" />
+
     <!-- 6.2. Binary operators -->
 
     <!-- All binary arithmetic, comparison, assignment, bitwise, logical,
@@ -790,6 +903,9 @@
         <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamName"/>
     </rule>
 
+    <rule ref="Generic.Commenting.Fixme"/>
+    <rule ref="Generic.Commenting.Todo"/>
+
     <!-- DocBlocks and comments SHOULD NOT be used for already typehinted arguments,
          except arrays. -->
     <rule ref="WebimpressCodingStandard.Functions.Param"/>
@@ -896,6 +1012,7 @@
          be written as one-liners. The `@var` MAY NOT be used for constants. -->
     <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration"/>
     <rule ref="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"/>
+    <rule ref="SlevomatCodingStandard.Commenting.UselessFunctionDocComment" />
 
     <!-- The correct tag case of PHPDocs and PHPUnit tags MUST be used. -->
     <rule ref="WebimpressCodingStandard.Commenting.TagCase"/>
