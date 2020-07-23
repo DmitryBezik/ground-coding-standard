@@ -540,9 +540,11 @@
             <property name="spacesCountBeforeColon" value="0" />
         </properties>
     </rule>
+    <!--
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint" />
     <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint" />
     <rule ref="SlevomatCodingStandard.Variables.UnusedVariable" />
+    -->
 
     <!-- 4.6 abstract, final, and static -->
 
@@ -1017,7 +1019,9 @@
     <!-- The `@var` tag MAY be used in inline comments to document the _Type_
          of properties. Single-line property comments with a `@var` tag SHOULD
          be written as one-liners. The `@var` MAY NOT be used for constants. -->
+    <!--
     <rule ref="SlevomatCodingStandard.Commenting.UselessFunctionDocComment" />
+    -->
 
     <!-- The correct tag case of PHPDocs and PHPUnit tags MUST be used. -->
     <rule ref="WebimpressCodingStandard.Commenting.TagCase"/>
