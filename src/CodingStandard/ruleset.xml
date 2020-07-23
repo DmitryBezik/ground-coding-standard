@@ -905,6 +905,7 @@
         <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing"/>
         <!-- May use excessive whitespace to align comments after parameter names -->
         <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamName"/>
+        <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
     </rule>
 
     <rule ref="Generic.Commenting.Fixme"/>
