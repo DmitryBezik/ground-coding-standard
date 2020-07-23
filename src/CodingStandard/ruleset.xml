@@ -254,7 +254,7 @@
     <!-- Block declare statements are allowed and MUST be formatted as below. -->
     <!-- checked by PSR12.Files.DeclareStatement -->
 
-    <!-- Additional rules --> 
+    <!-- Additional rules -->
 
     <!-- TODO: Declare statements must be after the File level docblock if present. -->
 
