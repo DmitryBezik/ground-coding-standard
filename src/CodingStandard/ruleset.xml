@@ -961,6 +961,7 @@
           */
     -->
     <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
+        <exclude name="SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectLinesCountBetweenDifferentAnnotationsTypes" />
         <properties>
             <property name="linesCountBeforeFirstContent" value="0"/>
             <property name="linesCountAfterLastContent" value="0"/>
