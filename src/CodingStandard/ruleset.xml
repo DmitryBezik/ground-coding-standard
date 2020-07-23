@@ -921,10 +921,12 @@
 
     <!-- DocBlocks and comments SHOULD NOT be used for already typehinted arguments,
          except arrays. -->
+    <!--
     <rule ref="WebimpressCodingStandard.Functions.ReturnType"/>
     <rule ref="WebimpressCodingStandard.Commenting.TagWithType">
         <exclude name="WebimpressCodingStandard.Commenting.TagWithType.InvalidOrder"/>
     </rule>
+    -->
 
     <!-- The asterisks in a DocBlock should align, and there should be one
          space between the asterisk and tag. -->
