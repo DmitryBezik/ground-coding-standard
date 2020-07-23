@@ -26,6 +26,7 @@
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
         <exclude name="Squiz.ControlStructures.ControlSignature.SpaceAfterKeyword"/>
+        <exclude name="Squiz.WhiteSpace.LanguageConstructSpacing.IncorrectSingle"/>
         <!-- checked by WebimpressCodingStandard.WhiteSpace.BraceBlankLine -->
     </rule>
 
@@ -373,7 +374,9 @@
     <!-- Class name resolution via `::class` MUST be used instead of
          `__CLASS__`, `get_class()`, `get_class($this)`,
          `get_called_class()`, `get_parent_class()` and string reference. -->
-    <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
+    <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference">
+        <exclude name="SlevomatCodingStandard.Classes.ModernClassNameReference.ClassNameReferencedViaFunctionCall" />
+    </rule>
     <rule ref="WebimpressCodingStandard.Formatting.StringClassReference"/>
     <!-- There MAY NOT be any whitespace around the double colon operator. -->
     <rule ref="WebimpressCodingStandard.Formatting.DoubleColon"/>
@@ -963,7 +966,7 @@
             <property name="linesCountAfterLastContent" value="0"/>
             <property name="linesCountBetweenDescriptionAndAnnotations" value="1"/>
             <property name="linesCountBetweenAnnotationsGroups" value="1"/>
-            <property name="annotationsGroups" type="array">
+            <!--<property name="annotationsGroups" type="array">
                 <element value="
                     @internal,
                     @deprecated,
@@ -985,7 +988,7 @@
                     @return\,
                     @throws\,
                 "/>
-            </property>
+            </property>-->
         </properties>
     </rule>
 
