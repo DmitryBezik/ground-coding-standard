@@ -744,6 +744,7 @@
          assignments, more spaces MUST be inserted before the equal sign to
          promote readability. -->
     <rule ref="Generic.Formatting.MultipleStatementAlignment">
+        <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame" />
         <properties>
             <property name="error" value="true"/>
             <property name="maxPadding" value="50"/>
