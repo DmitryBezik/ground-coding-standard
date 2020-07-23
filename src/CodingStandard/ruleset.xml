@@ -396,7 +396,9 @@
     <rule ref="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
     <rule ref="SlevomatCodingStandard.Classes.MethodSpacing.IncorrectLinesCountBetweenMethods" />
 
+    <!--
     <rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
+    -->
     <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
 
     <!-- 4.1 Extends and Implements -->
@@ -527,7 +529,9 @@
     <!-- The question mark MUST be used when the default argument value is null. -->
     <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"/>
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
-    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
+        <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation" />
+    </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint" />
     </rule>
@@ -908,7 +912,6 @@
 
     <!-- DocBlocks and comments SHOULD NOT be used for already typehinted arguments,
          except arrays. -->
-    <rule ref="WebimpressCodingStandard.Functions.Param"/>
     <rule ref="WebimpressCodingStandard.Functions.ReturnType"/>
     <rule ref="WebimpressCodingStandard.Commenting.TagWithType">
         <exclude name="WebimpressCodingStandard.Commenting.TagWithType.InvalidOrder"/>
@@ -1010,8 +1013,6 @@
     <!-- The `@var` tag MAY be used in inline comments to document the _Type_
          of properties. Single-line property comments with a `@var` tag SHOULD
          be written as one-liners. The `@var` MAY NOT be used for constants. -->
-    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration"/>
-    <rule ref="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"/>
     <rule ref="SlevomatCodingStandard.Commenting.UselessFunctionDocComment" />
 
     <!-- The correct tag case of PHPDocs and PHPUnit tags MUST be used. -->
