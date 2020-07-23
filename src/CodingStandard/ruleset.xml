@@ -1093,26 +1093,10 @@
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Classes/ClassConstantVisibilitySniff.php"/>
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/ControlStructures/AssignmentInConditionSniff.php"/>
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Functions/StaticClosureSniff.php"/>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/ControlStructures/DisallowEqualOperatorsSniff.php"/>
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Classes/UnusedPrivateElementsSniff.php"/>
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Functions/UnusedInheritedVariablePassedToClosureSniff.php"/>
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Namespaces/UselessAliasSniff.php"/>
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/ReturnTypeHintSpacingSniff.php"/>
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/ParameterTypeHintSpacingSniff.php"/>
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Namespaces/MultipleUsesPerLineSniff.php"/>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/TypeHintDeclarationSniff.php">
-        <properties>
-            <property name="enableEachParameterAndReturnInspection" value="true"/>
-        </properties>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessDocComment"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessParameterAnnotation"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessReturnAnnotation"/>
-    </rule>
-    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/Commenting/ForbiddenCommentsSniff.php">
-        <properties>
-            <property name="forbiddenCommentPatterns" type="array">
-                <element value="/Created by PhpStorm/i"/>
-            </property>
-        </properties>
-    </rule>
 </ruleset>
