@@ -4,6 +4,12 @@
          name="CodingStandard">
     <description>The Coding standard</description>
 
+    <arg name="extensions" value="php" />
+
+    <arg name="colors" />
+    <arg name="parallel" value="75" />
+    <arg value="np" />
+
     <!-- 1. Overview -->
 
     <!-- This specification extends PSR-12, the coding style guide and
